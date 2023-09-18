@@ -1,0 +1,277 @@
+
+.App {
+  text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color:gray;
+}
+
+h1{
+    text-align: center;
+
+}
+
+hr{
+    width: 5%;
+    font-weight: bold;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer{
+    min-height: 10em;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideBtm {
+    0% {
+        background-color: rgba(236, 236, 236, 0.34);
+        backdrop-filter: blur(10px);
+    }
+
+    20% {
+        background-color: rgba(236, 236, 236, 0.34);
+        backdrop-filter: blur(20px);
+    }
+
+    100% {
+        background-color: rgba(236, 236, 236, 0.34);
+        backdrop-filter: blur(30px);
+    }
+}
+
+.contai {
+  /*border: solid;*/
+    width: 100%;
+    /*height: 50%;*/
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.contai:hover > a {
+    height: 100%;
+    top: 0%;
+}
+
+.contai > a {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: var(--bg-anim);
+    position: absolute;
+    height: 0%;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    transition: all 1s;
+    backdrop-filter: blur(20px);
+
+}
+
+.contai > img {
+     width: 100%;
+   height: 100%;
+     /* ajoute un espacement entre les images */
+
+}
+
+.content{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-element);
+}
+
+
+.toggle-switch {
+    display: inline-block;
+    position: relative;
+   /* width: 60px;
+    height: 34px;*/
+    width: 65px;
+    height: 39px;
+}
+
+.toggle-switch input[type='checkbox'] {
+    display: none;
+}
+
+.toggle-switch-slider {
+    border: solid;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.toggle-switch-slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #2196f3;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-switch input[type='checkbox']:checked + .toggle-switch-slider {
+    background-color: #2196f3;
+}
+
+.toggle-switch input[type='checkbox']:checked + .toggle-switch-slider:before {
+    transform: translateX(26px);
+    background-color: white;
+}
+
+.gTest{
+    width: 100%;
+    margin-left: 2em;
+    height: 75em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1%;
+}
+
+.ground{
+    display: flex;
+}
+
+.ground > div {
+    border-bottom: solid var(--text-element);
+    padding: 1em;
+}
+
+.groundintra {
+    border-left: solid var(--text-element);
+}
+
+.groundCore{
+    display: flex;
+    border-top: solid var(--text-element);
+    border-bottom: solid var(--text-element);
+}
+
+.groundCore > div {
+    width: 50%;
+}
+
+.ground2{
+    padding: 1em;
+}
+
+.FontAnim{
+    background-color:var(--bg-anim);
+}
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    /*max-width: 600px;*/
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption h3 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+;}
+
+.next{
+    right: 0em;
+}
+
+.prev{
+    left: 0em;
+}
+
+
